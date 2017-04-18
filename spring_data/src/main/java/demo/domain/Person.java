@@ -1,16 +1,14 @@
 package demo.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+import javax.persistence.*;
 
 
 /**
  * Created by Credittone on 2017/4/10.
  */
 @Entity
-@NamedQuery(name="Person.withNameAndAddressNamedQuery",query="select p from Person p where p.name=?1 and address=?2")
+@Table(name="person")
+//@NamedQuery(name="Person.withNameAndAddressNamedQuery",query="select p from Person p where p.name=?1 and address=?2")
 public class Person {
     @Id
     @GeneratedValue
